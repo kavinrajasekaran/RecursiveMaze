@@ -32,7 +32,6 @@ public class MazeSolver {
 		int cols = maze[0].length;
 		for(int i= 0; i < rows; i++) {
 			for(int j=0; j < cols; j++) {
-				//System.out.println("table[" + i + "]["+ j +"]: " + table[i][j]);
 				System.out.print(maze[i][j]);
 				System.out.print(" ");
 			}
@@ -46,7 +45,7 @@ public class MazeSolver {
 	 public boolean findPath(int row, int column) {
 	        boolean done = false;
 	        if (valid(row, column)) {
-	            maze[row][column] = TRIED; // this cell has been tried
+	            maze[row][column] = TRIED; // this cell has been tried, but blocked
 	            if (row==maze.length-1 && column==maze[0].length-1)
 	                done = true; // the maze is solved
 	             else {
@@ -87,7 +86,6 @@ public class MazeSolver {
 	 public void initializeMaze() {
 		 try {
              
-	          //BufferedReader in = new BufferedReader(new FileReader("/Users/rajr/Desktop/eclipse-workspace/Playground/src/test/input.txt"));
 			 BufferedReader in = new BufferedReader(new FileReader("maze2.txt"));
 	           
 			 String line;
@@ -112,7 +110,6 @@ public class MazeSolver {
 	        		  
 	        	  }
 	        	  lineNumber++;
-	        	  //System.out.println(line);
 	          }
 	          in.close();
 		 	}  catch (IOException e) {
