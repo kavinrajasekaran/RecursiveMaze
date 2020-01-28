@@ -2,6 +2,12 @@
 comment0.target=MazeSolver
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
-comment2.params=table
-comment2.target=void\ printMaze(int[][])
-numComments=3
+comment2.params=
+comment2.target=void\ printMaze()
+comment3.params=row\ column
+comment3.target=boolean\ findPath(int,\ int)
+comment4.params=row\ column
+comment4.target=boolean\ valid(int,\ int)
+comment5.params=
+comment5.target=void\ initializeMaze()
+numComments=6
