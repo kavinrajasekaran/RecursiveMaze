@@ -11,7 +11,6 @@ public class MazeSolver {
 		
 		 try {
              
-	          //BufferedReader in = new BufferedReader(new FileReader("/Users/rajr/Desktop/eclipse-workspace/Playground/src/test/input.txt"));
 			 BufferedReader in = new BufferedReader(new FileReader("maze2.txt"));
 	           
 			 String line;
@@ -20,7 +19,6 @@ public class MazeSolver {
 			 int mazeColumns = 0;
 			 int[][] maze = null;
 			 
-			 //initialize the 2D maze
 	          while ((line = in.readLine()) != null) {
 	        	  if(lineNumber == 0) {
 	        		  mazeRows = Integer.parseInt(line);
@@ -36,7 +34,6 @@ public class MazeSolver {
 	        		  
 	        	  }
 	        	  lineNumber++;
-	        	  //System.out.println(line);
 	          }
 	          
 	         printMaze(maze);
@@ -56,7 +53,6 @@ public class MazeSolver {
 		int cols = table[0].length;
 		for(int i= 0; i < rows; i++) {
 			for(int j=0; j < cols; j++) {
-				//System.out.println("table[" + i + "]["+ j +"]: " + table[i][j]);
 				System.out.print(table[i][j]);
 				System.out.print(" ");
 			}
